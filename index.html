@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrene Camilla | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', /* Blue-500 */
+                        secondary: '#1e293b', /* Slate-800 */
+                        dark: '#020617', /* Slate-950 */
+                        card: '#0f172a', /* Slate-900 */
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+            color: #3b82f6;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans">
+
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Kyrene<span class="text-primary">.</span></a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#skills" class="hover:text-primary transition">Skills</a>
+                <a href="#projects" class="hover:text-primary transition">Projects</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-t border-gray-800 p-4">
+            <a href="#home" class="block py-2 hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 hover:text-primary">About</a>
+            <a href="#skills" class="block py-2 hover:text-primary">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-primary">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-600/20 rounded-full blur-3xl -z-10"></div>
+
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Kyrene Camilla</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 mb-8 h-8">
+            I am a <span id="typing-text" class="text-primary font-semibold typing-cursor"></span>
+        </p>
+        <p class="max-w-2xl text-gray-400 mb-10"> 
+            Combining creativity and technichality.
+        </p>
+        <div class="flex gap-4">
+            <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-blue-600 transition shadow-lg shadow-blue-500/30">
+                View Work
+            </a>
+            <a href="#contact" class="px-8 py-3 border border-gray-600 text-white rounded-full font-semibold hover:border-primary hover:text-primary transition">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-primary text-xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
+                    <p class="text-gray-400">Writing clean, maintainable code using modern standards like HTML5, CSS3, and JavaScript.</p>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-primary text-xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Creative Design</h3>
+                    <p class="text-gray-400">Bringing ideas to life with intuitive interfaces and user-friendly designs.</p>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-primary text-xl mb-6 group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Musician</h3>
+                    <p class="text-gray-400">Creative expression isn't limited to code. I also enjoy playing instruments and music.</p>
+                </div>
+            </div>
+
+            <div class="bg-card/50 p-8 rounded-2xl border border-gray-800 text-center md:text-left">
+                <p class="leading-relaxed">
+                    Hello! I'm Kyrene Camilla S. Estocapio, a 19-year-old BSIT student majoring in Web Technology. 
+                    I have a passion for creating user-friendly websites and applications, combining creativity with functionality. 
+                    My journey in tech is driven by curiosity and a constant desire to learn and adapt to new technologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 bg-secondary/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Skills & Expertise</h2>
+                <p class="text-gray-400">A comprehensive toolkit for building modern applications.</p>
+            </div>
+
+           <div class="grid md:grid-cols-2 gap-8">
+    <div class="bg-card rounded-2xl overflow-hidden border border-gray-800 hover:-translate-y-2 transition duration-300">
+        <div class="h-48 bg-gray-800 overflow-hidden">
+            <img src="pokemonapi.png" alt="Pokemon API" class="w-full h-full object-cover">
+        </div> <div class="p-8"> <h3 class="text-2xl font-bold text-white mb-3">Pokemon API</h3>
+            <p class="text-gray-400 mb-6">A small project on calling APIs.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">HTML</span>
+                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">CSS</span>
+                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">JS</span>
+            </div>
+            <a href="https://kyrenieee.github.io/api-calls/" class="text-primary hover:text-white font-semibold flex items-center gap-2">
+                View Project <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-card rounded-2xl overflow-hidden border border-gray-800 hover:-translate-y-2 transition duration-300">
+        <div class="h-48 bg-gray-800 overflow-hidden">
+            <img src="booking.png" alt="Pokemon API" class="w-full h-full object-cover">
+        </div> <div class="p-8"> <h3 class="text-2xl font-bold text-white mb-3">Cinema Booking System</h3>
+            <p class="text-gray-400 mb-6">A simple cinema booking system using PHP and MySQL.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">PHP</span>
+                <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">MySQL</span>
+            </div>
+            <a href="#" class="text-primary hover:text-white font-semibold flex items-center gap-2">
+                View Code <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+    <section id="contact" class="py-20 px-6 bg-secondary/30">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-gray-400">Have a project in mind or just want to chat?</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-400 mb-2 text-sm">Name</label>
+                        <input type="text" placeholder="Your Name" class="w-full bg-card border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 mb-2 text-sm">Email</label>
+                        <input type="email" placeholder="your.email@example.com" class="w-full bg-card border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-400 mb-2 text-sm">Message</label>
+                        <textarea rows="4" placeholder="Tell me about your project..." class="w-full bg-card border border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-primary transition"></textarea>
+                    </div>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition shadow-lg shadow-blue-500/25">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="bg-card p-8 rounded-2xl border border-gray-800">
+                    <h3 class="text-xl font-bold text-white mb-6">Connect With Me</h3>
+                    <p class="text-gray-400 mb-8">
+                        Let's collaborate on your next project. I'm always open to connecting with fellow developers and creators.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <a href="mailto:kcestocapio05@gmail.com" class="flex items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition group">
+                            <div class="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-white">kcestocapio05@gmail.com</span>
+                        </a>
+
+                        <a href="#" class="flex items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition group">
+                            <div class="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-white">LinkedIn</span>
+                        </a>
+
+                        <a href="#" class="flex items-center p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition group">
+                            <div class="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-white">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Kyrene Camilla. All Rights Reserved.</p>
+    </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
